@@ -27,7 +27,6 @@ def get_ip_address():
 
 def create_server():
     HandlerClass = SimpleHTTPRequestHandler
-    ServerClass = HTTPServer
     server = HTTPServer((get_ip_address(), 8000), HandlerClass)
     serv_info = server.socket.getsockname()
     return server, serv_info
